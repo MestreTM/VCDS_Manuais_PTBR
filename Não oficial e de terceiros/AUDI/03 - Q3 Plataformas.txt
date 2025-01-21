@@ -1,0 +1,176 @@
+Use o controle remoto para fechar janelas e teto solar mantendo pressionado o botão de bloqueio
+
+[09 - Cent. Elec.]
+[Coding - 07] -> [Long Coding Helper] -> Byte 3
+Bit 5 - Operação Conforto via Controle Remoto ativo
+Selecione
+
+
+MMI acesse: CAR / SISTEMAS / CONFIGURAÇÕES DO VEÍCULO / TRAVAMENTO CENTRAL e deverá haver uma opção que permite escolher quais janelas podem ser operadas com o controle remoto.
+
+
+
+Habilitar Controle Independent Fogs milhas com faróis altos
+
+[09 - Cent. Eleger.]
+[Coding - 07] -> [Long Coding Helper] -> Byte 14
+Bit 2 - Desmarque
+
+
+
+Cornering Fog Light - Milha ao virar
+
+[09 - Cent. Elect.]
+[Coding - 07] -> [Long Coding Helper] -> Byte 14
+Bit 7 -
+
+
+
+DRLs ativos (LEDs) permanecem ligados durante o sinal 
+
+[09 - Cent. Elect.]
+[Coding - 07] -> [Long Coding Helper] -> Byte 15
+Bit 3 - Desmarque
+
+
+
+Ativar Split Brake / Turn Signals nos LEDs traseiros
+
+[09 - Cent. Elec.]
+[Codificação - 07] -> [Auxiliar de codificação longa] -> Byte18
+[Bit 0 - 7] "84 Configuração da luz: Audi Q3 (8UB) Bi-Xenon (PR8BP / 8IH) | Caudas LED (PR-8SK) | DRLs (PR-8K4) "
+Selecione
+
+
+
+Alterar Número de Ciclos de Sinal pisca no Comfort
+
+[09 - Cent. Elec.]
+[Adaptação - 10] -> [Selecione no menu suspenso] ->
+[Sinais de giro de conforto (ciclos)] ->
+[Canal 31]
+Defina o valor de 2 a 5
+
+
+
+Desligue advertência do cinto de segurança
+
+[17 - Instrumentos]
+[Codificação - 07] -> [Auxiliar de codificação longa] -> [Byte 1]
+[Bit 1 - Alerta do cinto de segurança ativo / instalado]
+Desmarque a caixa
+
+
+
+Ativar varredura do ponteiro
+
+[17 - Instrumentos]
+[Adaptação - 10] -> Canal - Escalonamento
+Definir como "ativo"
+
+
+
+Ativar temporizador de volta / Temp do óleo em DIS
+
+[17 - Instrumentos]
+[Adaptação - 10] -> Canal - Contador de voltas
+Definir como "
+
+
+
+ativar " Ativar pressão em LT DIS
+
+[17 - Instrumentos]
+[Adaptação - 10] ->Canal - boost_pressure
+Defina para "on"
+
+
+
+Ativar menu oculto no MMI 3G
+
+[5F - Informação Eletr.]
+[Adaptação - 10] -> [Canal 6]
+Alterar 0 a 1
+
+Para acessar o menu oculto, mantenha pressionado Carro e Menu juntos por 5 segundos
+
+
+
+Desativar NAV & Mensagens de aviso do telefone ao inserir dados em velocidade
+
+[5F - Informação Eletr.]
+[Adaptação - 10] -> [Canal 2 e 3]
+Definido para 250
+
+
+
+Fechar a porta traseira com controle remoto (toque único)
+
+[6D - Trunk Elect.]
+[Segurança Acesso - 16] -> código: 12345
+[Adaptação - 10]
+(3) -Ativação usando o botão de abertura da tampa traseira no controle remoto - Função de toque para fechamento
+não ativo
+(4) -Ativação usando o botão de abertura da tampa traseira na função remota de toque de tecla para fechar
+ativo
+
+
+Feche o Windows e o teto solar com retenção estendida no botão de bloqueio
+
+[09 - Cent. Elec.]
+[Coding - 07] -> [Long Coding Helper] -> Byte 3
+Bit 5 - Operação Conforto via Controle Remoto ativo
+Selecione
+
+Use o controle remoto para fechar janelas e teto solar mantendo pressionado o botão de bloqueio :
+
+[09 - Cent. Elec.]
+[Codificação - 07] -> [Auxiliar de Codificação Longa] -> [Byte 3]
+[Bit 5 - Operação Conforto via Controle Remoto ativo]
+
+=> Caixa de
+Seleção Esc ou Sair da
+Codificação de Transferência
+Faça isso!
+
+
+Dobre automaticamente o espelho ao travar com o controle remoto ou
+com HOLD por 4 segundos no sensor da porta:
+Você DEVE codificar AMBOS os controladores da porta ou apenas UM espelho se dobrará -
+
+[42 - Escolha da porta. Driver]
+[Coding - 07] -> [Long Coding Helper] -> [Byte 4]
+[Bit 6 - Não documentado (1 = ativo) na string binária]
+=> Alterar bit 6 para 1
+Nota: Bit 0 está na extrema direita da string binária
+O antigo valor HEX para este byte era provavelmente 1C; O valor binário [00011100]
+e o valor NOVO HEX devem ser digitados como 5C; Valor binário [01011100]
+
+Esc ou sair da
+codificação de transferência
+Faça isso!
+
+[52 - Porta eleita. Aprovado.]
+[Codificação - 07] -> [Auxiliar de codificação longa] -> [Byte 4]
+[Bit 6 - Não documentado (1 = ativo) na string binária]
+=> Altere o bit 6 para 1
+Nota: O bit 0 está na extremidade direita da string binária
+O valor HEX antigo para este byte era prolly 1E; O valor binário [00011110]
+e o valor NOVO HEX devem ser digitados como 5E; Valor binário [01011110]
+
+Esc ou sair da
+codificação de transferência
+Faça isso!
+
+
+Ativar o controle de menu para DRL por meio da unidade de controle de codificação 9, a central elétrica.
+Unidade de controle 9, codificação, byte 15, bit 7-> Ativar para ativar o controle do menu
+Reinicie o MMI, você encontrará os itens do menu DRL em Carro, Luz, Luz externa, DRL.
+
+
+
+Sequências VCDS para retrair / estender os freios eletrônicos traseiros - Trocar pastilhas
+
+http://wiki.ross-tech.com/wiki/index.php/Working_on_the_Electro-Mechanical_Parking_Brake_(EPB) 
+
+
