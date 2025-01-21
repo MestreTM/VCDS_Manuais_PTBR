@@ -1,0 +1,45 @@
+AMAROK
+
+
+Instalar e habilitar camera de ré OEM
+https://www.4x4brasil.com.br/forum/picapes/130016-diagnostico-da-amarok-ferramentas-ross-tech-vcds-2.html#post2034083
+
+
+
+
+Modificação da Unidade de Consumo:
+
+Pelo Endereço 17-Instruments, clique no botão Adaptation-10; clique na aba Channel e localize o campo (8)- Units adjusted.
+O sistema indica a configuração atual, Milhas por Galão, no campo New Value, clique na aba e mude para Kilometers per Liter
+Clique no Do-It/codificar e está feito!
+
+438288
+
+Litros para Completar o Tanque:
+
+Pelo Endereço 17-Instruments, clique no botão Adaptation-10; clique na aba Channel e localize o campo Volume to be Replenished.
+O sistema indica a configuração atual, "No", no campo New Value, clique na aba e mude para "Yes"
+Clique no Do-It e está feito!
+Acho essa função interessante para se ter uma noção quando está reabastecendo o carro e verificar se a bomba no posto não está adulterada e eventualmente quanto litros ainda tem no tanque durante uma viagem para saber se está no "osso" ou não. Lembrem-se que isso não possui precisão centesimal, é mais uma referência.
+
+438289
+
+Indicator Celebration:
+
+Pelo Endereço 17-Instruments, clique no botão Adaptation-10; clique na aba Channel e localize o campo Indicator_Celebration.
+O sistema indica a configuração atual, "No", no campo New Value, clique na aba e mude para "Yes"
+Clique no Do-It/codificar e está feito!
+Esta é uma modificação meramente cosmética, mas dá um visual legal que quando liga a ignição do carro, os ponteiros varrem até o limite e voltam. Acho que os carros da GM atualmente fazem isso.....
+
+438290
+
+
+
+Travamento Automático das Portas e Destravamento das portas removendo a chave do contato:
+
+Pelo Endereço 09-Cent. Elect., clique no botão Coding-07; uma segunda tela vai abrir, clique no botão Long Coding Helper, que abrirá a tela dos códigos binários.
+No Byte 0, marque o BIT 3 e o BIT 4,, clique na palavra Exit que o sistema retornará para a tela do Long Coding, com um novo New Coding, Clique no Do-It/codificar e está feito!
+
+438291
+
+

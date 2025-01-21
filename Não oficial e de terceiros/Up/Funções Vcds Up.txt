@@ -1,0 +1,163 @@
+ Torne o volante mais leve 
+
+> Selecionar
+> Vá para Steering Assist (44)
+> Coding 07
+> Codificação longa
+
+Leve: Seu código longo deve ser: 0000000001010000
+
+Menos Leve: Seu código longo deve ser: 0000010001010000
+
+
+OU
+
+Deixar a direção do carro mais leve 
+
+Entre na opção "44-Steering Assist"
+Entre na opção "Coding -07"
+Aqui você já visualiza o code original que está no carro, tire um print desta tela para ter o valor original caso queira voltar.
+Entre em "Long Coding Helper"
+Ele apresentará tipo um array, com vários quadradinhos com números 00 ou 01. Selecione o segundo quadradinho.
+Desmarque a opção "Driver Steering Recommendation (DSR) active.
+Copie o código em amarelo na parte superior, deve estar 0000000001010000, feche o X essa tela.
+Voltando a tela anterior, cole o código no campo "New conding" em seguida clique em "Do It!" para salvar a alteração.
+
+
+-----------------------------
+
+ Altere os piscas de mudança de faixa (piscadas de conforto) para mais de 3
+
+> Central Elétrica (09 )
+> Adaptação
+> Licht und Sicht
+> Komfortblinker_Blinkzyklen
+> Defina-o como você deseja que sejam os piscadas de mudança de faixa.
+
+Escolha a qtdade de sua preferência
+
+-----------------------------
+
+
+ Desativar alerta de lâmpada intermitente  (para de piscar rapidamente no painel)
+
+> Central Electrics (09)
+> Codificação longa
+> Lampenausfallerkennung Blinkleuchten
+> Defina como Não ativo
+
+Útil se você tiver luzes LED sem conserto CAN.
+
+
+
+-----------------------------
+
+ Desativar ou ativar alarme de desbloqueio (bip)
+
+> Central Elétrica (09)
+> Adaptação
+> Komfortfunktionen
+> Akustische Rückmeldung beim Entriegeln (Quittierung) que é o bipe de desbloqueio/destrancar do alarme
+> Definir como Não ativado para desativar
+> Definir como ativado para ativar
+
+
+
+Akustische Rückmeldung beim Verriegeln (Quittierung), que é o bipe de bloqueio/trancar do alarme
+> Definir como Não ativado para desativar
+> Definir como ativado para ativar
+
+
+Desativar ambos desativa essencialmente o bipe de alarme quando bloqueio/trava e desbloqueio/destrava.
+
+-----------------------------
+ 
+Mudar Tela inicial dos logotipos RADIO
+
+5F - Information Electronic
+Coding - 07
+Long Coding Helper
+Byte 18
+BIT 0-7
+OPCIONES
+01 Hybrid (Twin Drive)
+2 GTD
+3 GTI
+4 Blue Motion
+5 e-Blue Motion
+6 R-Line
+7 R
+8 AllTrack
+09 GTE
+0C Family
+0F W Skoda
+10 Beats Audio
+
+OU
+
+Entra na unidade 5F , vai em codificação longa e altera o byte número 18, que por padrão vem 00. Ao alterar esse byte, tem os seguintes resultados:
+01 - Cross
+02 - Blue Motion
+03 - E-up!
+04 - Eco up!
+05 - Beats Audio
+06 - Sound
+07 - Allstar
+08 - Rline
+09 - Spice
+10 - GTI
+
+-----------------------------
+
+ Habilitar o cornering lights
+
+Na central elétrica 09, acesse:
+Byte 12 e selecione o bit 6 (Turn cornering lights installed active)
+Byte 21 e selecione o bit 2 (Cornering turn lights via turn signal active) e o bit 7 (Front Fog Lights with turn lights installed)
+
+-----------------------------
+
+Alterar o Volume do sensor de ré original
+
+Selecionar a Opção "10-Park/Steer Assist"
+Após carregar o módulo, selecionar o botão "Adaptation - 10"
+Em "Channel", selecione no combo-box a opção "MAS01426-Speaker Volume for rear park assist"
+Em Stored value, estará "Stage X" onde X é o número setado atualmente na central do seu UP, marque isso em algum lugar caso queira voltar para o original!
+Em "New Value" selecione o Stage que desejar, eu coloquei o Stage 9, nesta opção, quando maior o Stage, mais alto fica o beep do sensor de ré.
+Clique em "Do it!"/codificar para ele gravar a alteração.
+
+-----------------------------
+
+Alterar a Frequência (tom) do sensor de ré
+
+Selecionar a Opção "10-Park/Steer Assist"
+Após carregar o módulo, selecionar o botão "Adaptation - 10"
+Em "Channel", selecione no combo-box a opção "MAS0427-Speaker Frequency for rear park assist"
+Em Stored value, estará "Stage X" onde X é o número setado atualmente na central do seu UP, marque isso em algum lugar caso queira voltar para o original!
+Em "New Value" selecione o Stage que desejar, eu coloquei o Stage 8 no meu, achei o mais confortável e legal, o meu estava antes no Stage 6. Pelo que entendi, quando menor o número do Stage, mais grave fica o barulho do sensor (frequencia mais baixa), quando maior o stage, a frequencia fica maior, deixando o beep mais agudo.
+Clique em "Do it!"/codificar para ele gravar a alteração.
+
+
+-----------------------------
+
+Alterar a quantidade de piscadas no confort-blink
+
+No software do VCD, acessar a aba "Electronic 1"
+Selecionar a Opção "09-Cent. Elect."
+Após carregar o módulo, selecionar o botão "Adaptation - 10"
+Em "Channel"/canal, selecione no combo-box a opção "ENG16981-ENG115854-Licht und Sicht-Komfortblinken_Blinkzyklen" (está em Alemão).
+Em Stored value, estará "3" onde indica que pisca tres vezes ao dar um toque na seta. marque isso em algum lugar caso queira voltar para o original!
+Em "New Value" coloque a quantidade desejada, eu coloquei 4 e achei o suficiente para sinalizar uma troca de faixa, 3 piscadas eu achava pouco, 5 piscadas achei que acaba confundindo a galera na rua quando há muitas curvas seguidas na cidade.
+Clique em "Do it!"/codificar para ele gravar a alteração.
+
+--------------------------------------------------
+
+ Quantidade de Litros no tanque
+
+->Vá em 17-Instruments
+->Clique em 10 - Adaptation
+->No Campo "Channel" procure pela função "Volume to be Replenished"
+->Clique no Campo "New Value" e selecione "Yes"
+->Clique em "Do It!/codificar" 
+
+-------------------------------------------------------

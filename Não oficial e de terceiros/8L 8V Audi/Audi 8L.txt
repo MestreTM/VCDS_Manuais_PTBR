@@ -1,0 +1,49 @@
+Audi 8L
+
+
+Ssinal sonoro alarme, travar as portas aos 20km. etc.....
+
+o certo seria fazer a alteração pelo canal 46, porem nossos 8L nao tem esse modulo. tem que ser no canal 35.
+
+acessem o modulo 35 no vag de vocês depois ir em coding -07-
+
+la vai ter um numero. copiem caso de alguma coisa errada e precisem voltar pra ele.
+
+teoricamente sem nenhuma função o codigo deve ser:
+- 14849
+
+* com sinal sonoro pro alarme: 15873;
+
+* sinal sonoro pro alarme, + vidros subir e descer com o controle: 15937;
+* sinal sonoro pro alarme, + vidros subir e descer com o controle + travar as portas aos 20km/h:15969;
+* sinal sonoro pro alarme, + vidros subir e descer com o controle + travar as portas aos 20km/h + destravar uma porta com um click no controle e destravar todas com dois clicks:15973;
+
+
+
+mas me parece que para travar as 20km/h deve-se adicionar 32 ao valor, destravar uma porta com um click no controle e todas com 2 clicks adicionar mais 4 ao valor, subir e descer os vidros com o controle somar mais 64, buzina ao trancar o carro +1024.
+
+
+
+Pra quem quiser colocar o aviso de cinto de segurança no painel:
+Com o VAG-COM, vai em instruments e em coding, 00544, e simples coloquem 02 nos primeiros dígitos, (EX.: 02544) Pronto quando virar a ignição vai acender o sinal.
+
+
+_____________________________________________________________________________________
+
+
+
+Audi A3/S3 (8L)
+
+
+Codificações para AUDI 8L site Rosstech abaixo:
+
+
+http://wiki.ross-tech.com/wiki/index.php/Audi_A3/S3_(8L)
+
+
+Para aqueles que desejarem poderão utilizar o navegador Google Chrome para fazer a tradução.
+
+
+
+
+
